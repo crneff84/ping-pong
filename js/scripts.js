@@ -23,7 +23,6 @@ var pingPong = function(array) {
   return array;
 }
 
-
 //FRONTEND
 $(document).ready(function(){
   $("#blanks form").submit(function(event) {

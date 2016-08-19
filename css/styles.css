@@ -1,11 +1,13 @@
 body {
-  background-color: #feffff;
-  color: #312c32;
+  background-image: url("../img/field.jpeg");
+  color: #1C2833;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: #98dafc;
+  background: rgba(128, 255, 84, 0.7);
 }
 
 #blanks {
@@ -14,7 +16,7 @@ body {
 
 #rules {
   font-size: 16px;
-  background-color: #98dafc;
+  background: rgba(128, 255, 84, 0.7);
   border-radius: 6px;
   padding: 10px;
 }
@@ -24,8 +26,21 @@ body {
   margin: 10px;
 }
 
+#results-list {
+  margin: auto;
+}
+
 #number-input {
   display: block;
   margin: 0 auto;
   max-width: 200px;
+}
+
+#author {
+  border: solid 2px;
+  border-radius: 6px;
+  padding: 4px;
+  margin-top: 5px;
+  float: right;
+  color: white;
 }
