@@ -1,7 +1,31 @@
-#display-results {
-  display: none;
+body {
+  background-color: #feffff;
+  color: #312c32;
 }
 
 .jumbotron {
   text-align: center;
+  background-color: #98dafc;
+}
+
+#blanks {
+  text-align: center;
+}
+
+#rules {
+  font-size: 16px;
+  background-color: #98dafc;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+#display-results {
+  display: none;
+  margin: 10px;
+}
+
+#number-input {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
 }

@@ -1,6 +1,6 @@
 //BACKEND
-var totalArray = [];
-var numbers = function(number) {
+var countLoop = function(number) {
+  var totalArray = [];
   for (total = 0; total <= number; total++) {
     totalArray.push(total);
   }
@@ -13,11 +13,11 @@ var pingPong = function(array) {
       array.splice(i,1,0);
     }
       else if (array[i] % 3 === 0 && array[i] % 15 !== 0) {
-      array.splice(i,1,"Ping");
+      array.splice(i,1,"ping");
     } else if (array[i] % 5 === 0 && array[i] % 15 !== 0) {
-      array.splice(i,1,"Pong");
+      array.splice(i,1,"pong");
     } else if (array[i] % 15 === 0) {
-      array.splice(i,1,"Ping-Pong");
+      array.splice(i,1,"ping-pong");
     }
   }
   return array;
@@ -29,9 +29,12 @@ $(document).ready(function(){
   $("#blanks form").submit(function(event) {
   event.preventDefault();
   var userInput = parseInt($("#number-input").val());
-  var outputArray = numbers(userInput);
-  var results = pingPong(outputArray);
-  $("#list-output").append("<li>"+ results + "</li>");
+  var outputArray = countLoop(userInput);
+  var pingPonged = pingPong(outputArray);
+  $("#results-list").empty();
+  for (i = 0; i < pingPonged.length; i++) {
+    $("#results-list").append("<li>" + pingPonged[i] +"</li>");
+  };
   $("#display-results").show();
   });
 });
